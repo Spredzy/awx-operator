@@ -1,8 +1,8 @@
 ---
 - version: v1beta1
-  group: awx.ansible.com
-  kind: AWX
+  group: controller.ansible.com
+  kind: AutomationController
   playbook: /opt/ansible/main.yml
   finalizer:
-    name: finalizer.awx.ansible.com
+    name: finalizer.controller.ansible.com
     role: finalizer
