@@ -1,5 +1,8 @@
 GLOBAL_JOB_EXECUTION_ENVIRONMENTS = [
-{% for item in ee_images %}
+    {'name': 'EE Minimal' , 'image': '{{ lookup("env", "EE_MINIMAL_CONTAINER_IMAGE") }}'},
+    {'name': 'EE 2.9' , 'image': '{{ lookup("env", "EE_29_CONTAINER_IMAGE") }}'},
+    {'name': 'EE supported' , 'image': '{{ lookup("env", "EE_SUPPORTED_CONTAINER_IMAGE") }}'},
+{% for item in ee_images | default([]) %}
     {'name': '{{ item.name }}' , 'image': '{{ item.image }}'},
 {% endfor %}
 ]

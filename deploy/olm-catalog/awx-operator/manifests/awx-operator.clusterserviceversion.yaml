@@ -708,6 +708,12 @@ spec:
                   value: quay.io/ansible/awx:19.2.2
                 - name: CONTROL_PLANE_EE_CONTAINER_IMAGE
                   value: quay.io/ansible/awx-ee:0.5.0
+                - name: EE_MINIMAL_CONTAINER_IMAGE
+                  value: quay.io/aap/ansible-automation-platform-20-ee-minimal-rhel8:latest
+                - name: EE_29_CONTAINER_IMAGE
+                  value: quay.io/aap/ansible-automation-platform-20-ee-29-rhel8:latest
+                - name: EE_SUPPORTED_CONTAINER_IMAGE
+                  value: quay.io/aap/ansible-automation-platform-20-ee-supported-rhel8:latest
                 image: quay.io/ansible/awx-operator:0.12.0
                 imagePullPolicy: Always
                 livenessProbe:
